@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="reset.min.css"/>
+    <style type="text/css">
+        html, body {
+            overflow-x: hidden;
+        }
+
+        html {
+            font-size: 100px;
+        }
+
+        .box {
+            margin: 0 .2rem;
+            height: 3rem;
+            background: green;
+        }
+    </style>
+    <script type="text/javascript">
+        //->很据屏幕和设计稿的宽度比例重新计算REM计算的根值
+        ~function (desW) {
+            var winW = document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = winW / desW * 100 + "px";
+        }(750);
+    </script>
+</head>
+<body>
+<!--
+  设计稿750px*1334px(iphone 6)
+  有一张宽度710px*300px的图片
+-->
+<div class="box"></div>
+</body>
+</html>
